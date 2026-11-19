@@ -1,0 +1,38 @@
+name: "★ Đánh giá & Góp ý Memorizes"
+description: "Gửi đánh giá sao (1★–5★), nhận xét hoặc đề xuất tính năng mới cho Memorizes."
+title: "[★] Đánh giá Memorizes"
+labels: ["review"]
+body:
+  - type: dropdown
+    id: stars
+    attributes:
+      label: "Số sao đánh giá"
+      options:
+        - "★★★★★ (5/5 — Tuyệt vời)"
+        - "★★★★☆ (4/5 — Rất hữu ích)"
+        - "★★★☆☆ (3/5 — Khá ổn)"
+        - "★★☆☆☆ (2/5 — Cần cải thiện)"
+        - "★☆☆☆☆ (1/5 — Gặp vấn đề lớn)"
+    validations:
+      required: true
+  - type: checkboxes
+    id: tags
+    attributes:
+      label: "Điểm bạn quan tâm"
+      options:
+        - label: "Lưu & tra từ nhanh"
+        - label: "Giao diện gọn nhẹ"
+        - label: "Bảo mật yên tâm"
+        - label: "Ôn tập hiệu quả"
+        - label: "Đề xuất tính năng"
+        - label: "Báo lỗi"
+  - type: textarea
+    id: comment
+    attributes:
+      label: "Nhận xét chi tiết"
+      placeholder: "Chia sẻ cảm nhận thực tế của bạn hoặc điều bạn muốn Memorizes cải thiện..."
+  - type: input
+    id: version
+    attributes:
+      label: "Phiên bản đang dùng"
+      placeholder: "v3.0.0"
